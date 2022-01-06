@@ -78,11 +78,7 @@ const main = (async () => {
             const currTempCF = [convertKelvinToCelsius(currTemp), convertKelvinToFahrenheit(currTemp)];
             const currCondition = weatherData.current.weather[0].main;
         
-            const output = `
-            Current temperature in ${place_name} is ${currTempCF[0]} C / ${currTempCF[1]} F.
-            Conditions are currently: ${currCondition}.
-            What you should expect: ${dayCondition} throughout the day.
-            `
+            const output = `Current temperature in ${place_name} is ${currTempCF[0]} C / ${currTempCF[1]} F.\nConditions are currently: ${currCondition}.\nWhat you should expect: ${dayCondition} throughout the day.`
             console.log(output);
         } catch(e) {
             console.error('There was an error with one of the APIs, try again later.');
